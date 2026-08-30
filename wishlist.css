@@ -1,0 +1,89 @@
+/* Product Page Wishlist */
+.elementor-kit-11 .product-page-wishlist button {
+    background-color: transparent;
+		color: black;
+		border: none;
+}
+
+.elementor-kit-11 .product-page-wishlist button:hover {
+    background-color: transparent;
+    color: black;
+		border: none;
+}
+
+/* Add To Wishlist */
+.product-page-wishlist .woosw-icon-5:before {
+    content: "\e90d";
+		font-size: 24px;
+}
+
+/* Wishlist Loader */
+.product-page-wishlist .woosw-icon-31:before {
+    content: "\e97b";
+		font-size: 24px;
+}
+
+/* Remove From Wishlist */
+.product-page-wishlist .woosw-icon-8:before {
+    content: "\e90c";
+		font-size: 24px;
+}
+
+.product-page-wishlist .woosw-btn-icon-text .woosw-btn-text {
+  display: none;
+}
+
+/* Wishlist Page Wishlist */
+.wishlist-page-wishlist .woosw-popup-content-mid-message {
+	display: none;
+}
+
+.wishlist-page-wishlist .vamtam-empty-wishlist-icon {
+	width: 230px;
+	height: 230px;
+}
+
+.wishlist-page-wishlist .vamtam-look-for-heart {
+	font-family: NewHeroTRIAL-Bold;
+	font-size: 18px;
+	line-height: 27px;
+}
+
+.wishlist-page-wishlist .vamtam-start-shopping {
+	font-family: NewHeroTRIAL-Bold;
+	font-size: 16px;
+	line-height: 24px;
+	z-index: 0 !important;
+}
+
+/* Container */
+selector {
+    position: relative !important;
+}
+
+/* Shortcode */
+/* Anchors to top-right corner on Desktop */
+selector {
+    position: absolute !important;
+    top: 0px !important;
+    right: 0px !important;
+    left: auto !important;
+    bottom: auto !important;
+    z-index: 99;
+}
+
+/* Fixes positioning on Tablets */
+@media (max-width: 1024px) {
+    selector {
+        top: 0px !important;
+        right: 0px !important;
+    }
+}
+
+/* Fixes positioning on Mobile phones */
+@media (max-width: 767px) {
+    selector {
+        top: 0px !important;
+        right: 0px !important;
+    }
+}
