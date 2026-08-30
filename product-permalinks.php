@@ -1,3 +1,8 @@
+/**
+ * AAKASI - Product permalinks as /%product_cat%/product-name/
+ * Full solution: generates URLs + rewrite rules + safe flushing + admin-safe editing
+ */
+
 // Reserved slugs that must NEVER be treated as a product category prefix
 function aakasi_reserved_slugs() {
     return array(
