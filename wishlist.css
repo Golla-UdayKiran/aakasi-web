@@ -1,32 +1,32 @@
 /* Product Page Wishlist */
 .elementor-kit-11 .product-page-wishlist button {
     background-color: transparent;
-		color: black;
-		border: none;
+	color: black;
+	border: none;
 }
 
 .elementor-kit-11 .product-page-wishlist button:hover {
     background-color: transparent;
     color: black;
-		border: none;
+	border: none;
 }
 
 /* Add To Wishlist */
 .product-page-wishlist .woosw-icon-5:before {
     content: "\e90d";
-		font-size: 24px;
+	font-size: 24px;
 }
 
 /* Wishlist Loader */
 .product-page-wishlist .woosw-icon-31:before {
     content: "\e97b";
-		font-size: 24px;
+	font-size: 24px;
 }
 
 /* Remove From Wishlist */
 .product-page-wishlist .woosw-icon-8:before {
     content: "\e90c";
-		font-size: 24px;
+	font-size: 24px;
 }
 
 .product-page-wishlist .woosw-btn-icon-text .woosw-btn-text {
