@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" id="aakasiShareBtn" style="cursor: pointer;">
+      <path d="M20 13V19C20 19.5304 19.7893 20.0391 19.4142 20.4142C19.0391 20.7893 18.5304 21 18 21H6C5.46957 21 4.96086 20.7893 4.58579 20.4142C4.21071 20.0391 4 19.5304 4 19V13M12 15V3M12 3L8.5 6.5M12 3L15.5 6.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+      <path d="M20 13V19C20 19.5304 19.7893 20.0391 19.4142 20.4142C19.0391 20.7893 18.5304 21 18 21H6C5.46957 21 4.96086 20.7893 4.58579 20.4142C4.21071 20.0391 4 19.5304 4 19V13M12 15V3M12 3L8.5 6.5M12 3L15.5 6.5" stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+
+    <script>
+      document.getElementById('aakasiShareBtn').addEventListener('click', function () {
+        var caption = 'Found the perfect style on AAKASI! 👌 You need to see this! #FashionFinds #MadeinIndiafortheWorld';
+      
+        // Website link stays plain -> always opens in browser.
+        // App-generated link gets ?ref=app -> MainActivity routes it to the
+        // in-app WebView instead of the browser.
+        var isInsideApp = !!(window.AndroidShare && typeof window.AndroidShare.share === 'function');
+        var url = window.location.href;
+        if (isInsideApp) {
+          url += (url.indexOf('?') === -1 ? '?' : '&') + 'ref=app';
+        }
+      
+        var fullText = caption + '\n' + url;
+      
+        if (isInsideApp) {
+          // Copy is guaranteed via the native clipboard bridge, and the share
+          // sheet still pops up for the user to pick WhatsApp/etc. if they want.
+          window.AndroidShare.copyLink(caption, url);
+          window.AndroidShare.share(caption, url);
+        } else if (navigator.share && window.isSecureContext) {
+          navigator.share({ title: 'AAKASI', text: caption, url: url }).catch(function () {});
+        } else if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(fullText);
+        } else {
+          var t = document.createElement('textarea');
+          t.value = fullText;
+          document.body.appendChild(t);
+          t.select();
+          document.execCommand('copy');
+          document.body.removeChild(t);
+        }
+      });
+    </script>
+  </body>
+</html>
