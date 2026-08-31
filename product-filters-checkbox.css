@@ -1,0 +1,48 @@
+.shop-page-category .bapf_body ul,
+.shop-page-size .bapf_body ul {
+  height: auto !important;
+  width: auto !important;
+  justify-content: flex-start !important;
+  gap: 0.5rem !important;
+}
+
+.shop-page-category .bapf_body ul li,
+.shop-page-size .bapf_body ul li {
+  width: auto !important;
+  height: auto !important;
+  max-width: none !important;
+  position: static !important;      /* stop label from absolutely filling this */
+  border: 1px solid #000000 !important;
+  background-color: #ffffff !important;
+  padding: 0 !important;
+}
+
+.shop-page-category .bapf_body ul li label,
+.shop-page-size .bapf_body ul li label {
+  position: static !important;      /* was absolute, filling a 70x70 box */
+  width: auto !important;
+  height: auto !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 3px 12px !important;
+  border: none !important;          /* remove lavender 2px border, li now owns the border */
+  background-color: transparent !important; /* remove lavender fill */
+  color: #000000 !important;
+  text-transform: uppercase !important;
+  font-family: NewHeroTRIAL-Light !important;
+  font-size: 12px !important;
+  white-space: nowrap !important;
+  cursor: pointer !important;
+}
+
+.shop-page-category .bapf_body ul li input[type="checkbox"],
+.shop-page-size .bapf_body ul li input[type="checkbox"] {
+  display: none !important;
+}
+
+.shop-page-category .bapf_body ul li input[type="checkbox"]:checked + label,
+.shop-page-size .bapf_body ul li input[type="checkbox"]:checked + label {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
